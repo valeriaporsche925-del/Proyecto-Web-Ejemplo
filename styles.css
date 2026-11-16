@@ -1,0 +1,89 @@
+/* Estilos iniciales de Nexo Digital */
+:root {
+  --ink: #202033;
+  --muted: #77778a;
+  --purple: #7357e8;
+  --pale: #f5f3ff;
+  --white: #ffffff;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  color: var(--ink);
+  background: var(--white);
+  line-height: 1.6;
+}
+a { color: inherit; text-decoration: none; }
+.site-header {
+  min-height: 78px;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eeeeF4;
+}
+.logo { font-size: 1.35rem; font-weight: 900; letter-spacing: .12em; }
+.logo span, .hero h1 span, .section-heading h2 span, .about h2 span { color: var(--purple); }
+nav { display: flex; align-items: center; gap: 30px; font-size: .92rem; }
+nav a:hover, .course-card a:hover { color: var(--purple); }
+.nav-button { border: 1px solid #ded9fb; border-radius: 30px; padding: 9px 18px; }
+.hero {
+  min-height: 510px;
+  padding: 70px 10%;
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  align-items: center;
+  gap: 30px;
+  background: linear-gradient(115deg, #faf9ff, #f0edff);
+  overflow: hidden;
+}
+.eyebrow { color: var(--purple); font-size: .72rem; font-weight: 800; letter-spacing: .17em; }
+.hero h1 { margin: 15px 0; font-size: clamp(2.8rem, 6vw, 5rem); line-height: 1.05; letter-spacing: -.055em; }
+.hero-copy { max-width: 470px; color: var(--muted); margin-bottom: 28px; }
+.button { display: inline-block; padding: 13px 22px; color: white; background: var(--purple); border-radius: 30px; font-weight: 700; box-shadow: 0 10px 24px #7357e844; }
+.button span { margin-left: 14px; }
+.hero-art { min-height: 330px; display: grid; place-items: center; position: relative; }
+.glass-card { z-index: 1; width: 245px; height: 235px; padding: 20px; border: 1px solid #ffffff; border-radius: 22px; background: #ffffffbb; box-shadow: 0 25px 70px #5543a52b; transform: rotate(-7deg); }
+.card-dot { display: inline-block; width: 8px; height: 8px; margin-right: 5px; border-radius: 50%; background: #c5baf9; }
+.code-mark { margin-top: 25px; color: var(--purple); font-size: 4.2rem; font-weight: 900; text-align: center; }
+.glass-card p { text-align: center; font-size: .72rem; letter-spacing: .15em; }
+.orbit { position: absolute; border: 1px solid #cfc6fa; border-radius: 50%; }
+.orbit-one { width: 300px; height: 300px; }
+.orbit-two { width: 380px; height: 180px; transform: rotate(35deg); }
+.spark { position: absolute; color: var(--purple); font-size: 2rem; }
+.spark-one { top: 30px; right: 15%; }
+.spark-two { bottom: 30px; left: 12%; }
+.section { padding: 85px 10%; }
+.section-heading { text-align: center; margin-bottom: 38px; }
+.section-heading h2, .about h2 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.15; letter-spacing: -.04em; }
+.course-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.course-card { padding: 27px; border: 1px solid #eceaf4; border-radius: 18px; transition: transform .2s, box-shadow .2s; }
+.course-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px #29204b12; }
+.course-icon { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 14px; font-size: 1.5rem; }
+.purple { background: #eeeaff; color: #7357e8; }
+.mint { background: #e4f8f1; color: #299b76; }
+.peach { background: #fff0e8; color: #d47c4b; }
+.course-level { margin-top: 22px; color: var(--muted); font-size: .65rem; font-weight: 800; letter-spacing: .12em; }
+.course-card h3 { margin: 8px 0; font-size: 1.25rem; }
+.course-card p:not(.course-level) { min-height: 76px; color: var(--muted); font-size: .9rem; }
+.course-card a { color: var(--purple); font-size: .88rem; font-weight: 800; }
+.course-card a span { margin-left: 8px; }
+.about { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 50px; background: #faf9ff; }
+.about > p { color: var(--muted); max-width: 470px; }
+footer { padding: 35px 10%; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+footer p { color: var(--muted); font-size: .82rem; }
+.copyright { width: 100%; margin: 0; padding-top: 18px; border-top: 1px solid #eeeeF4; }
+
+@media (max-width: 760px) {
+  .site-header { padding: 18px 6%; align-items: flex-start; gap: 15px; }
+  nav { gap: 12px; flex-wrap: wrap; justify-content: flex-end; font-size: .8rem; }
+  .hero { grid-template-columns: 1fr; padding: 60px 7%; }
+  .hero-art { min-height: 280px; }
+  .section { padding: 65px 7%; }
+  .course-grid, .about { grid-template-columns: 1fr; }
+  .course-card p:not(.course-level) { min-height: auto; }
+  footer { padding: 30px 7%; }
+}
